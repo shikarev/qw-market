@@ -1,0 +1,30 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    h1{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.4rem;
+
+    }
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    .sections{
+        width: 100%;
+    }
+}
+
+.offers{
+    @include for-mobile-only{
+        display: none;
+    }
+}
+
+.select_wrapper {
+    margin-bottom: 8rem;
+}

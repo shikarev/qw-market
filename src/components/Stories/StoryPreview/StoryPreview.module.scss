@@ -1,0 +1,84 @@
+@import "../../../styles/mixins";
+@import "../../../styles/sass-utils";
+
+$story-side: 18.2rem;
+
+.root {
+  padding: 1rem;
+  width: 19rem;
+  height: 24rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-size: cover;
+  //@include hover-scale();
+}
+
+.media {
+  position: relative;
+  width: $story-side;
+  max-width: $story-side;
+  height: $story-side;
+  max-height: $story-side;
+
+  & img, video{
+    border-radius: 3.4rem;
+    object-fit: cover;
+    object-position: center;
+    width: $story-side;
+    max-width: $story-side;
+    height: $story-side;
+    max-height: $story-side;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background: linear-gradient(135deg, #7433FF 0%, #FFA3FD 100%);
+    border-radius: 3.8rem;
+    z-index: -1;
+  }
+
+  &-fade {
+    position: absolute;
+    width: 19rem;
+    height: 19rem;
+    border-radius: 3.6rem;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    bottom: -4px;
+    left: -4px;
+  }
+
+  &-description {
+    position: absolute;
+    bottom: 2.2rem; // 2.6 - 4px
+    left: 1.2rem; // 1.6 - 4px border
+    color: white;
+    font-weight: 600;
+    @include text-fixed-rows(2)
+  }
+}
+
+.vendor {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-top: 1.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: flex;
+  align-items: center;
+  height: 5.6rem;
+
+  &-name {
+    margin-left: 1rem;
+    @include text-fixed-rows(2)
+  }
+}
+
+

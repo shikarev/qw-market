@@ -1,0 +1,124 @@
+@import '../../../styles/base.scss';
+@import '../../../styles/mixins.scss';
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -18px;
+}
+
+.bordered{
+    @include add-border();
+    padding: 2.8rem;
+    margin: 18px;
+    h3{
+        font-weight: 600;
+        font-size: 2.4rem;
+        max-width: 27rem;
+    }
+    .title{
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.cardheader{
+    display: flex;
+    justify-content: space-between;
+    .edit{
+        color: $primaryTap;
+        font-weight: 600;
+        cursor: pointer;
+        padding-left: 0.5em;
+        margin-top: 0 !important;
+    }   
+}
+
+
+.addresses{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.addressbox{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.address{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.details{
+    color: $secondaryTextDark;
+    font-size: 1.6rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.photo{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;    
+}
+
+.user{
+    padding: 20px;
+    p{
+        margin-top: 1rem;
+    }
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1 1 auto;
+    &:first-child{
+        margin-bottom: 2rem;
+    }
+}
+
+.card{
+    white-space: nowrap;
+    display: flex;
+    img{
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        margin-right: 1rem;
+    }
+    .cardname{
+        font-weight: 500;
+        line-height: 19px;
+    }
+    p{
+        margin-bottom: 0.5rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.discount{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex: 1 1 auto;
+    .discountnum{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-bottom: .8rem;
+        p{
+            margin-left: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import "src/styles/mixins";
+
+.filterTitle {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: $mainTextDark;
+}
+
+.wrapper {
+  margin-bottom: 4rem;
+}
+
+.native {
+  margin: 0 0 1.8rem 0;
+}

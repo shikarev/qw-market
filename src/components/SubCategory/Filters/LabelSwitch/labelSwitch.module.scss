@@ -1,0 +1,14 @@
+@import '../../../../styles/base.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon{
+  flex: 1 0 2rem;
+  path{
+    fill: $secondaryTextDark;
+  }
+}

@@ -1,0 +1,12 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    margin-top: 9rem;
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 4.5rem;
+        font-weight: bold;
+        line-height: 4.8rem;
+        color: $mainTextDark;
+    }
+}

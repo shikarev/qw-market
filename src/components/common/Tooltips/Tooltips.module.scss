@@ -1,0 +1,9 @@
+@import '../../../styles/base.scss';
+
+.icon{
+  margin-left: 1rem;
+  flex: 1 0 2rem;
+  path{
+    fill: $secondaryTextDark;
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../../../styles/base.scss';
+
+.head{
+  position: relative;
+  height: 56px;
+  width: 280px;
+  border-radius: 32px;
+  border: 2px solid $dividerBlack;
+  cursor: pointer;
+
+  p{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1.6rem 2.4rem;
+  }
+  .bold{
+    font-weight: 600;
+  }
+}
+
+.selected{
+  position: absolute;
+  background-color: white;
+  z-index: 14;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.6rem 2.4rem;
+  color: $dividerBlack;
+}
+
+.active{
+  font-weight: 600;
+  color: $mainTextDark;
+}
+
+.items{
+  position: absolute;
+  padding-top: 3rem;
+  top: 26px;
+  left: -2px;
+  background-color: white;
+  width: 100%;
+  border-radius: 0 0 32px 32px;
+  border: 2px solid $dividerBlack;
+  border-top: 0;
+  overflow: visible;
+  z-index: 12;
+  & p:hover{
+      background-color: $accent-1;
+  }
+  & p:last-child{
+    border-radius: 0 0 32px 32px;
+  }
+}
+.show{
+  display: none;
+}
+.arrow-down{
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 13;
+}
+
+.arrow-up{
+  transform: rotateX(180deg);
+  z-index: 13;
+}

@@ -1,0 +1,80 @@
+@import "src/styles/base";
+@import "src/styles/mixins";
+
+.wrapper {
+  margin-right: 3rem;
+  min-width: 26rem;
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+
+  @include for-mobile-only{
+    position: fixed;
+    width: calc(100vw - 6rem);
+    top: 0;
+    left: 0;
+    z-index: 15;
+    padding: 7.8rem 2rem 2rem;
+    background-color: white;
+  }
+}
+
+.count{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+.filterTitle {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: $mainTextDark;
+}
+
+.clear{
+  color: $primary;
+  cursor: pointer;
+}
+
+.filters{
+  position: relative;
+  button{
+    display: none;
+  }
+
+  @include for-mobile-only{
+    padding: 1.7rem;
+    padding-top: 17.2rem;
+    width: auto;
+    height: 100%;
+    z-index: 20;
+    background-color: white;
+    button{
+      display: block;
+    }
+  }
+}
+
+.filters_hidden{
+  display: block;
+  @include for-mobile-only{
+    display: none;
+  }
+}
+

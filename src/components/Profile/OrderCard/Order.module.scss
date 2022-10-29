@@ -1,0 +1,132 @@
+@import '../../../styles/base.scss';
+@import '../../../styles/mixins.scss';
+
+.wrapper{
+    @include add-border();
+    max-width: 1290px;
+    margin-right: 0;
+    margin-bottom: 4rem;
+}
+
+.container{
+    display: flex;
+    margin-top: 4rem;
+    align-items: flex-start;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 4rem;
+    .description{
+        color: $secondaryTextDark;
+        font-weight: normal;
+    }
+    .finished{
+        color: $mainTextDark;
+        font-weight: normal;
+    }
+    .status{
+        display: flex;
+        align-items: center;
+        span{
+            margin-left: 1.25rem;
+        }
+    }
+    .icon{
+        width: 2.4rem;
+        height: 2.4rem;
+        flex: 0 0 2.4rem;
+    }
+}
+
+.products{
+    margin-right: 4rem;
+    margin-left: 4rem;
+    flex: 1 1 30%;
+}
+
+.details{
+    flex: 1 1 66%;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-overflow: ellipsis;
+    overflow: auto;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    .line{
+        display: grid;
+        grid-column-gap: 1.6rem;
+        grid-template-columns: max-content max-content;
+    }
+    .label{
+        color: $mainTextDark;
+        margin-bottom: 1.25rem;
+    }
+    .description{
+        color: $secondaryTextDark;
+        padding-right: 1rem;
+    }
+    .bold{
+        font-weight: 700;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .bonuses{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+    .icon{
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+    }
+}
+
+.btn{
+    //@extend .btnSubtle;
+}
+
+.mainBtn{
+   // @extend .btnPrimarySmall;
+    margin-right: 1rem !important;
+    padding: 1rem 1rem !important;
+}
+
+.date{
+    display: flex;
+}
+
+@media screen and (max-width: 1023px){
+    .products{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    header{
+        flex-direction: column;
+        .status{
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .details{
+        display: flex;
+        flex-direction: column;
+        .description{
+            margin-bottom: .5rem;            
+        }
+    }
+  }
+

@@ -1,0 +1,48 @@
+@import "src/styles/mixins";
+
+.viewer{
+  background-color:$accent-1;
+  border-radius: 3rem;
+  width: 40rem;
+  height: 40rem;
+  margin: auto 0;
+}
+
+.media{
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content{
+  position: relative;
+  object-fit: contain;
+  border-radius: 2rem;
+  max-width: 40rem;
+  max-height: 40rem;
+}
+
+.right{
+  right: 1.6rem;
+}
+
+.left{
+  left: 1.6rem;
+}
+
+.controls{
+  position: absolute;
+  top: calc(50% - 23px);
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+
+.hidden{
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}

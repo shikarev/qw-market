@@ -1,0 +1,51 @@
+@import "src/styles/mixins";
+
+.wrapper{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1.6rem 0;
+  align-items: center;
+  @include for-mobile-only{
+    padding-top: 1.4rem;
+    order: 2;
+  }
+}
+
+.stars{
+  display: flex;
+  flex-wrap: nowrap;
+  padding-right: .8rem;
+}
+
+.reviews {
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.review {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  @include for-mobile-only{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+.color {
+  color: #757575;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #00CC67;
+  @include for-mobile-only{
+    flex-direction: column;
+    margin-top: .8rem;
+  }
+}

@@ -1,0 +1,130 @@
+@import "src/styles/mixins";
+
+.wrapper {
+    margin-bottom: 20rem;
+
+}
+
+.big {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    @include for-mobile-only {
+        flex-direction: column;
+        order: 1;
+    }
+}
+
+.feedback {
+    width: 60%;
+    padding-right: 12.6rem;
+    @include for-mobile-only {
+        width: 100%;
+        order: 2;
+        padding-right: 0;
+    }
+    section:last-child hr {
+        display: none;
+    }
+}
+
+.sectionContainer {
+    //margin-bottom: 4.7rem;
+}
+
+/*.feedback > section hr {
+    background-color: DodgerBlue;
+}*/
+
+.toReviewsBtn {
+    max-width: 200px;
+}
+
+.statistics {
+    width: 40%;
+    @include for-mobile-only {
+        width: 100%;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.rateTitleMini {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    color: $mainTextDark;
+}
+
+.rateTitle {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: bold;
+    margin: 4rem 0;
+    color: $mainTextDark;
+}
+
+.reviewTitle {
+    margin-right: 3rem;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    color: $mainTextDark;
+}
+
+.reviewContainer {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    @include for-mobile-only {
+        order: 2;
+    }
+}
+
+.ratingValue {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $mainTextDark;
+    margin-left: 1rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: $mainTextDark;
+    margin-bottom: 1.6rem;
+}
+
+.bigText {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $mainTextDark;
+    margin-bottom: 2.4rem;
+}
+
+.sort {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 3rem;
+}
+
+.item {
+    margin-right: 1.6rem;
+    cursor: pointer;
+}
+
+.active {
+    color: #EB4F5A;
+}
+
+.inActive {
+    color: #757575;
+}

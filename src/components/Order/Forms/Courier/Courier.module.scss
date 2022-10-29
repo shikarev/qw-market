@@ -1,0 +1,28 @@
+@import 'src/styles/base';
+
+.form-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  h2{
+    padding-right: 2rem;
+  }
+  & span{
+    color: $primaryTap;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    cursor: pointer;
+  }
+}
+
+.submit_button{
+  margin-top: 2rem;
+}
+.top{
+  margin-top: 6rem;
+}
+
+.button{
+  margin-top: 2.4rem;
+  width: 100%;
+}

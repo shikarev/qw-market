@@ -1,0 +1,28 @@
+@import "src/styles/sass-utils";
+@import "src/styles/base";
+@import "src/styles/sass-utils";
+
+.title{
+  margin-bottom: 4rem !important;
+  @include media-breakpoint-down(sm){
+    font-size: 2rem;
+  }
+}
+
+.banner{
+  max-width: 55.2%;
+  flex-basis: 55.2%;
+  @include media-breakpoint-down(md) {
+
+    display: none;
+  }
+}
+
+.grid{
+  max-width: 44.8%;
+  flex-basis: 44.8%;
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}

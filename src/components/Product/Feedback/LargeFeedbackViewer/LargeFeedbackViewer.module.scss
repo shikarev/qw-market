@@ -1,0 +1,39 @@
+@import "src/styles/mixins";
+
+.title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: $mainTextDark;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.large_viewer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  &:not(:last-child){
+    margin-right: 1.6rem;
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90px;
+  border-radius: .8rem;
+  overflow: hidden;
+  color: white;
+}

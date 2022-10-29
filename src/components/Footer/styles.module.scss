@@ -1,0 +1,98 @@
+@import "src/styles/base";
+@import "src/styles/mixins";
+
+footer{
+  display: flex;
+  position: relative;
+  min-height: 28.5rem;
+  background: $accent-1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @mixin for-mobile-only {
+      @media (max-width: $mobile-size) { @content; }
+    }
+    @mixin for-tablet-portrait-up {
+      @media (min-width: $tablet-size) { @content; }
+    }
+    @mixin for-tablet-landscape-up {
+      @media (min-width: $tablet-landscape-size) { @content; }
+    }
+    @mixin for-desktop-up {
+      @media (min-width: $desktop-size) { @content; }
+    }
+    @mixin for-large-desktop-up {
+      @media (min-width: $large-desktop-size) { @content; }
+    }
+
+    @mixin for-larger-desktop-up {
+      @media (min-width: $larger-desktop-size) { @content; }
+    }
+    height: calc(100% - 6rem);
+    padding: 6rem 0;
+    @include for-mobile-only{
+      width: calc(100% - 4rem);
+      padding: 6rem 2rem;
+    }
+    .credentials{
+      display: flex;
+      flex:1;
+      flex-direction: column;
+      justify-content: space-between;
+      @include for-mobile-only{
+        align-items: center;
+      }
+      @include for-tablet-portrait-up{
+        align-items: center;
+      }
+      @include for-desktop-up{
+        align-items: flex-start;
+      }
+      &_cols{
+        justify-content: flex-start;
+        @include for-mobile-only{
+          display: none;
+        }
+        @include for-tablet-portrait-up{
+          display: none;
+        }
+        @include for-desktop-up{
+          display: flex;
+        }
+        .title{
+          margin: 1rem;
+          font-weight: 600;
+        }
+      }
+      .link{
+        color: $mainTextDark;
+        text-decoration: none;
+        margin: 1.2rem;
+        &:hover{
+          color: $primary;
+        }
+      };
+      .social {
+        display: flex;
+        margin-top: .4rem;
+        &_button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 4.8rem;
+          background: #fff;
+          margin: .8rem;
+          &:hover{
+            background: $primary;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+    //width: 10rem;
+}
+
+.container {
+    display: flex;
+}
+
+.star{
+    padding: 2px;
+}
+
+.halfstar path{
+    fill: url(#gradient)
+}
+
+.emptystars path{
+    fill: gray;
+}

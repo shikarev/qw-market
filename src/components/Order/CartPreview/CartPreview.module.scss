@@ -1,0 +1,94 @@
+@import "src/styles/mixins";
+
+.cart{
+  //height: 100%;
+  &-info{
+    padding-top: 1.6rem;
+    font-size: 1.6rem;
+    color: $secondaryTextDark;
+    display: flex;
+    & svg{
+      flex: 1 0 auto;
+      padding-right: 1.6rem;
+    }
+  }
+  hr{
+    width: calc(100% + 9.6rem);
+    margin-left: -4.8rem;
+    border-top: 1px solid $accent-1;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  &-price{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    white-space: nowrap;
+  }
+  &-discount{
+    display: flex;
+    justify-content: space-between;
+    & span:first-child{
+      font-weight: 500;
+    }
+    & span:last-child{
+      color: $primary;
+    }
+  }
+}
+
+.product{
+  display: flex;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  &-image{
+    width: 96px;
+    max-width: 96px;
+    height: 96px;
+    flex: 1 0 96px;
+    border-radius: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: $accent-1;
+    padding: 1rem;
+  }
+  &-description{
+    margin-left: 2.8rem;
+    width: calc(100% - 170px);
+  }
+
+  &-header{
+    overflow: hidden;
+  }
+  &-name{
+    @include text-fixed-rows(2);
+    margin-bottom: 1.6rem;
+  }
+
+  &-delete{
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  &-quantity{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    p{
+      margin: 0 2rem;
+    }
+  }
+
+  &-price{
+    font-weight: 700;
+  }
+}

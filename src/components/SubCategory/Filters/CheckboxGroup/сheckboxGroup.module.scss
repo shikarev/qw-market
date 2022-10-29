@@ -1,0 +1,53 @@
+@import '../../../../styles/base.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.search {
+  margin-bottom: 1.9rem;
+}
+
+.expander{
+  display: flex;
+  align-items: center;
+  color: $primary;
+  font-weight: 700;
+  cursor: pointer;
+  span{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.arrow{
+  margin-right: 1.4rem;
+  //transition: all .2s ease-in-out;
+  //vertical-align: middle;
+  path[stroke]{
+    stroke: $primary;
+  }
+  path[fill]{
+    fill: $primary;
+  }
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  //margin-bottom: 2rem;
+}
+
+.icon{
+  flex: 1 0 2rem;
+  path{
+    fill: $secondaryTextDark;
+  }
+}
+
+.question{
+  display: flex;
+}

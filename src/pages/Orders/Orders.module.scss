@@ -1,0 +1,23 @@
+.wrapper{
+  & > div:not(:first-of-type){
+    margin-top: 3rem;
+  }
+}
+
+.buttons{
+  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  & button:not(last-of-type){
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+  & button{
+      padding: 1.2rem 1.6rem;
+      font-size: 17px;
+      border-radius: 3.2rem;
+    & span{
+      line-height: 2rem;
+    }
+  }
+}

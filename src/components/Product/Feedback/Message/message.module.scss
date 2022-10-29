@@ -1,0 +1,25 @@
+@import "src/styles/mixins";
+
+.review {
+  display: block;
+  padding-left: 6rem;
+}
+
+.message {
+  margin-bottom: 1.6rem;
+}
+
+.messageType {
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-bottom: .8rem;
+}
+
+.text {
+  max-width: 60rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  color: $mainTextDark;
+}

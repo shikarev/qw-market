@@ -1,0 +1,49 @@
+@import "src/styles/mixins";
+
+.container {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userName {
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+}
+
+.commentTime {
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: flex-start;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.rating {
+  margin-top: .8rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.ratingValue {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $mainTextDark;
+  margin-left: 1rem;
+}

@@ -1,0 +1,63 @@
+@import "../../../../styles/base.scss";
+
+.actions {
+  width: 100%;
+}
+
+.commentsButton {
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 1.6rem;
+
+  &:hover {
+    color: $primary
+  }
+}
+
+.edit {
+  color: $mainTextDark;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+.delete {
+  color: #EB4F5A;
+  cursor: pointer;
+}
+
+.replyContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1.6rem 0;
+}
+
+.buttonsRow {
+  margin-top: 1.6rem;
+}
+
+.commentsContainer {
+  padding-left: 6rem;
+  margin-top: 1.6rem;
+}
+
+.commentsShow {
+  width: fit-content;
+  cursor: pointer;
+  font-weight: 600;
+  &:hover {
+    color: $primary
+  }
+}
+
+.loadMore {
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 1.6rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: $primary;
+
+  &:hover {
+    color: #ff4653
+  }
+}

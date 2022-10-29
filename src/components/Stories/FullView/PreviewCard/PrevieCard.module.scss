@@ -1,0 +1,23 @@
+$media-small-width: 288px;
+$media-small-height: 630px;
+$media-large-width: 329px;
+$media-large-height: 715px;
+
+.card{
+  background-color: #1a202c;
+  //margin: 2.5rem;
+  transform: scale(1.2);
+  object-fit: cover;
+  object-position: center;
+
+  &__small{
+    width: $media-small-width;
+    height: $media-small-height;
+    filter: blur(1rem);
+  }
+  &__large{
+    width: $media-large-width;
+    height: $media-large-height;
+    filter: blur(.5rem);
+  }
+}

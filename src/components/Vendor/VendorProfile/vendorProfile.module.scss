@@ -1,0 +1,83 @@
+@import "src/styles/mixins";
+@import "src/styles/sass-utils";
+
+.container {
+  display: grid;
+  width: 100%;
+  //grid-column-gap: 2rem;
+  //grid-template-columns: 2.5fr 1.5fr 2fr;
+  p {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  @include media-breakpoint-up(sm) {
+    grid-column-gap: 2rem;
+    grid-template-columns: 2.5fr 1.5fr 2fr;
+  }
+  @include media-breakpoint-up(xs){
+    grid-template-rows: auto;
+    grid-row-gap: 2rem;
+  }
+}
+
+.completed_order {
+  display: flex;
+  align-items: center;
+}
+
+.lightgray {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: $secondaryTextDark;
+  margin-left: .8rem;
+}
+
+.content {
+  background: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 4.4rem;
+  padding: 2.4rem;
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: $mainTextDark;
+  margin-bottom: 2.4rem;
+}
+
+.inn {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $mainTextDark;
+  margin-bottom: 1.6rem;
+}
+
+.siteLink {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #2975FF;
+  word-break: break-all;
+  a {
+    color: #2975FF;
+  }
+}
+
+.vendorAddress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.addressField {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $mainTextDark;
+  margin-left: 1.6rem;
+}

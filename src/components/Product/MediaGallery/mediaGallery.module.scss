@@ -1,0 +1,71 @@
+@import "../../../styles/base.scss";
+@import "src/styles/mixins";
+
+.wrapper{
+    display: flex;
+    max-height: 504px;
+    align-items: flex-start;
+}
+
+.carousel{
+    max-height: fit-content;
+    scrollbar-width: 0;
+    margin-right: 2rem;
+    -ms-overflow-style: none;
+    //-webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+    flex: 0 0 auto;
+    //overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include for-mobile-only{
+        display: none;
+    }
+}
+
+.viewport{
+    position: relative;
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    //flex: 1 1 auto;
+}
+
+.moreMedia {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $primary;
+    cursor: pointer;
+}
+
+.thumb{
+    width: 6rem;
+    box-sizing: border-box;
+    min-height: 6rem;
+    border-radius: 1.4rem;
+    background-color: $accent-1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.skeleton-wrapper {
+    display: flex;
+}
+
+.skeleton-image {
+    background-color: #F6F7FB;
+    border-radius: 3rem;
+    margin: auto 0;
+}
+
+.skeleton-small-image {
+    background-color: #F6F7FB;
+    border-radius: 1.4rem;
+    margin-right: 2rem;
+}

@@ -1,0 +1,128 @@
+@import "src/styles/mixins";
+
+.header{
+  display: flex;
+  & p:last-child{
+    color: $primary;
+    font-weight: 700;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+  margin-bottom: 7rem;
+  margin-top: 1.6rem;
+}
+
+.container{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $accent-1;
+  }
+}
+
+.details{
+  &-label{
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  &-block{
+    margin-bottom: 4rem;
+  }
+}
+
+.product{
+  display: flex;
+  margin-top: 3rem;
+  overflow: hidden;
+  &-image{
+    flex: 0 0 8rem;
+    height: 8rem;
+    margin-right: 3rem;
+    background-color: $accent-1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2.4rem;
+  }
+  &-description{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-name{
+    flex: 1 0 100%;
+    font-weight: 600;
+  }
+  &-price{
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  &-quantity{
+    color: $secondaryTextDark;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+}
+
+.order{
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.1);
+  border-radius: 44px;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  &-status-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &-date{
+    margin-bottom: 6rem;
+    & span:first-child{
+      color: $secondaryTextDark;
+    }
+    &__created{
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+  }
+  &-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    span{
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: $secondaryTextDark;
+      flex-shrink: 0;
+      margin: 0 .8rem;
+    }
+  }
+  &-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end
+  }
+  &-price{
+    font-size: 2.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  &-status{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 2.6rem;
+  }
+  &-payment-status{
+    color: $secondaryTextDark;
+    font-weight: 700;
+    margin-top: .8rem;
+  }
+}
+

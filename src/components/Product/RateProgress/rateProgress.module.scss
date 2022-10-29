@@ -1,0 +1,18 @@
+@import "src/styles/mixins";
+
+.container {
+  @include for-mobile-only {
+    order: 1;
+  }
+}
+
+.containerProgress {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: $mainTextDark;
+}

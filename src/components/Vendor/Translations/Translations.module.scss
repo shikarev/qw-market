@@ -1,0 +1,137 @@
+@import "src/styles/mixins";
+
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & .live {
+    margin-bottom: 6rem;
+
+    & .root {
+      height: 55rem;
+      border-radius: 5rem;
+
+      & .media-info{
+        top: 3.2rem;
+        left: 3.2rem;
+      }
+
+      & .info {
+        min-height: 19rem;
+      }
+
+      & h2 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.root {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  height: 34rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  background: #EAEEF9;
+
+  & .placeholder{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .media-preview {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    object-fit: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .media-info{
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .view{
+    margin-left: 1rem;
+    background: linear-gradient(74.27deg, #FFFFFF 7.49%, rgba(255, 255, 255, 0.1) 133.63%);
+    padding: .75rem 1.4rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    backdrop-filter: blur(2rem);
+    & p{
+     margin-left: 1rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    & svg{
+      height: 2rem;
+    }
+  }
+
+  .start{
+    margin-left: 1rem;
+  }
+
+  .date{
+    padding: .8rem 1.4rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    &__record{
+      background: #2975FF;
+    }
+    &__announcement{
+      background: #00CC67;
+    }
+  }
+
+  .info {
+    box-sizing: border-box;
+    position: absolute;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(74.27deg, #FFFFFF 7.49%, rgba(255, 255, 255, 0.1) 133.63%);
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    border-radius: 2rem;
+    padding: clamp(1.2rem, 3%, 2.4rem) clamp(1.6rem, 4%, 3.2rem);
+    width: 100%;
+    min-height: 14rem;
+
+    & h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      @include text-fixed-rows(2);
+    }
+    & .duration {
+      position: absolute;
+      top: -4.6rem;
+      right: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: .8rem 1.1rem;
+      border-radius: 3rem;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid #FFFFFF80;
+      color: white;
+      backdrop-filter: blur(2rem);
+      background: #FFFFFF1A;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../../styles/base.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    img{
+        width: 8rem;
+        height: 8rem;
+        margin-right: 2.8rem;
+        border-radius: 1.6rem;
+    }
+}
+
+.btn{
+   // @extend .btnSubtle;
+    margin-left: 10.8rem;
+    width: fit-content;
+}
+
+.container{
+    display: flex;
+    .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .name{
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .prices{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .price {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .oldprice{
+        margin-left: 1rem;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: line-through;
+        white-space: nowrap;
+        color: $secondaryTextDark;
+    }
+
+}
+

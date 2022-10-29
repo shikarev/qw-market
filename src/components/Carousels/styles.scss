@@ -1,0 +1,71 @@
+@import "src/styles/sass-utils";
+@import "src/styles/base";
+@import "src/styles/mixins";
+
+@mixin setDimensions($margin){
+  width: calc(100% + #{$margin});
+}
+
+.carousel-container{
+  max-width: 1440px;
+  min-width: 420px;
+
+  @include media-breakpoint-up(xs){
+    @include setDimensions($mobile-margin);
+  }
+  @include media-breakpoint-up(md){
+    @include setDimensions($tablet-portrait-margin);
+  }
+  @include media-breakpoint-up(xl){
+    @include setDimensions($desktop-margin);
+  }
+}
+
+.carousel{
+  position: relative;
+  margin-bottom: 10rem;
+  &_product-item{
+    max-width: 15rem;
+    margin-right: 8.5rem;
+    @include media-breakpoint-down(sm){
+      margin-right: 3.2rem;
+    }
+  }
+}
+
+.carousel-button-group{
+  position: absolute;
+  right: 0;
+  top: 0;
+  &__hidden{
+    display: none;
+  }
+}
+.review-carousel-button-group{
+  position: absolute;
+  right: 0;
+  top: -100px;
+  &__hidden{
+    display: none;
+  }
+}
+
+.carousel-button{
+  @include hover-scale();
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  &__right{
+    right: 0;
+  }
+  &__left{
+    right: 86px;
+  }
+}
+
+.carousel-title{
+  margin: 2rem 0;
+  width: calc(100% - 150px); //100% - control buttons
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

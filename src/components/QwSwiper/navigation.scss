@@ -1,0 +1,68 @@
+//@import "swiper/swiper-vars.scss";
+@import "../../styles/mixins.scss";
+@import "src/styles/base";
+@import "src/styles/sass-utils";
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  border-radius: 19px;
+  &:not(:last-child) {
+    margin-right: 46px;
+    @include media-breakpoint-down(sm){
+      margin-right: 16px;
+    }
+  }
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  &:after {
+    font-size: 20px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  &:after {
+    content: '';
+    background-image: url('../../assets/Icons/viewer_l.svg?url');
+    background-size: 46px 46px;
+    width: 46px;
+    height: 46px;
+    @include media-breakpoint-down(sm){
+      background-size: 3.6rem 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  &:after {
+    content: '';
+    background-image: url('../../assets/Icons/viewer_r.svg?url');
+    background-size: 46px 46px;
+    width: 46px;
+    height: 46px;
+    @include media-breakpoint-down(sm){
+      background-size: 3.6rem 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+}
+
+.swiper-button-lock {
+  display: none;
+}

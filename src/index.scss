@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import 'styles/mixins.scss';
+@import 'styles/sass-utils';
+@import "~bootstrap-scss/utilities";
+@import "~bootstrap-scss/helpers";
+@import "~bootstrap-scss/utilities/api";
+
+@mixin setMargin($margin){
+  margin: 0 $margin;
+}
+
+*:focus {
+ outline: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: -apple-system, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-track{
+  min-width: 100%;
+}
+
+.slick-list{
+  min-width: 100%;
+}
+
+.disable-scroll{
+  @include for-mobile-only{
+    overflow: hidden;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.animate {
+  transition: ease .25s;
+}
+
+#root{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container{
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  flex: 1;
+  margin: 2.3rem auto 0;
+  @include media-breakpoint-up(xs){
+    padding: 0 $mobile-margin;
+  }
+  @include media-breakpoint-up(md){
+    padding: 0 $tablet-portrait-margin;
+  }
+  @include media-breakpoint-up(xl){
+    padding: 0 $desktop-margin;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@keyframes ease {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.gradient__star-secondary {
+  stop-color: white;
+}
+
+.gradient__star {
+  stop-color: $primary;
+}
+
+.fade-enter {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  animation: ease .25ms 2.75s both, cubic-bezier(0.2, 0.5, 0.75, 1.8);
+}
+
+.fade-enter.fade-enter-active {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  backface-visibility: hidden;
+  animation: ease .25ms 2.75s both, cubic-bezier(0.2, 0.5, 0.75, 1.8);
+}
+

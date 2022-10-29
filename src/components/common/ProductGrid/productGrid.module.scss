@@ -1,0 +1,37 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    width: 100%;
+    hr{
+        margin-top: 4rem;
+        margin-bottom: 2.4rem;
+        border-top: 1px solid $dividerBlack;
+    }
+}
+
+.content{
+
+}
+
+.product{
+    //max-width: 204px;
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span{
+        white-space: nowrap;
+        color: $secondaryTextDark;
+        font-weight: 500;
+    }
+    nav{
+        width: fit-content;
+    }
+}
+
+.empty{
+    height: 466px;
+}

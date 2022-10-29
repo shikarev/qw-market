@@ -1,0 +1,56 @@
+@import "src/styles/mixins";
+
+.root {
+  min-width: 375px;
+  margin-bottom: 8rem;
+}
+
+.selector {
+  margin-bottom: 7rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.action {
+  cursor: pointer;
+  position: relative;
+  width: 96%;
+  height: 0;
+  border-radius: 2rem;
+  padding-bottom: 112%;
+  background-color: $accent-1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  p {
+    position: absolute;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 8rem;
+    width: 100%;
+    border-radius: 2rem;
+    background: linear-gradient(74.27deg, #FFFFFF 7.49%, rgba(255, 201, 201, 0.31) 133.63%);
+    backdrop-filter: blur(22px);
+    bottom: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.6rem;
+  }
+}
+
+.actions {
+  margin-bottom: 4rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+}

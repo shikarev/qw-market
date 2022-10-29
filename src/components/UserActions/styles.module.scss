@@ -1,0 +1,31 @@
+@import '../../styles/base';
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  .action {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+    //margin: 1.2rem;
+
+    .badge{
+      margin: .75rem;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    &_title {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+}

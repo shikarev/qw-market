@@ -1,0 +1,33 @@
+@import '../../../styles/mixins.scss';
+
+.header{
+    h1{
+        margin-bottom: 6rem;
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.categories{
+
+    column-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.skeletons{
+    width: 50%;
+    & > span {
+        height: 2.4rem;
+    }
+}
+

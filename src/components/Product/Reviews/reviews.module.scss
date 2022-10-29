@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+
+.wrapper {
+  margin-top: -2rem;
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: $mainTextDark;
+  }
+}
+
+.feedback{
+  margin-top: 90px;
+}

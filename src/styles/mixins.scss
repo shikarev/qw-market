@@ -1,0 +1,63 @@
+@import "base";
+
+@mixin for-mobile-only {
+  @media (max-width: $mobile-size) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $tablet-size) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $tablet-landscape-size) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $desktop-size) { @content; }
+}
+@mixin for-large-desktop-up {
+  @media (min-width: $large-desktop-size) { @content; }
+}
+
+@mixin for-larger-desktop-up {
+  @media (min-width: $larger-desktop-size) { @content; }
+}
+
+$hover-scale: 1.05 !default;
+
+@mixin hover-scale($scale: $hover-scale, $duration: 150ms) {
+  transition: transform $duration;
+  &:hover{
+    transform: scale(if($scale == null, $hover-scale, $scale));
+  }
+}
+
+@mixin text-fixed-rows($num-rows){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $num-rows;
+}
+
+@mixin add-border{
+  position: relative;
+  border: 2px solid $blackLightGray;
+  box-sizing: border-box;
+  border-radius: 44px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  hr{
+    width: calc(100%);
+    margin-block: 0;
+    margin-inline: 0;
+    border: solid 1px $blackLightGray;
+  }
+}
+
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

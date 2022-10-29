@@ -1,0 +1,46 @@
+@import 'src/styles/base';
+
+.root{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  & h2{
+    margin: 4rem 0;
+  }
+}
+
+.cards_root{
+  max-width: 840px;
+}
+
+.empty{
+    flex: 3 1 100%;
+}
+
+.method{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.form-header{
+  display: flex;
+  justify-content: space-between;
+  h2{
+    padding-right: 2rem;
+  }
+  & span{
+    color: $primaryTap;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    cursor: pointer;
+  }
+}
+
+.button{
+  margin-top: 2.4rem;
+  width: 100%;
+}
+
+.loading{
+  min-height: 200px;
+}

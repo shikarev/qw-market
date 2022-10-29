@@ -1,0 +1,73 @@
+@import '../../../styles/base.scss';
+
+.list{
+    margin-bottom: 4rem;
+    margin-right: 1.5rem;
+    width: 250px;
+
+    h2{
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 2rem 0;
+        padding-right: 4rem;
+        margin-bottom: 0.4rem;
+        &:hover{
+            color: $primary;
+        }
+    }
+    p{
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.small-list{
+    margin-bottom: 0rem;
+    h2{
+        padding: 1.4rem 0;
+        padding-right: 2rem;
+    }
+}
+
+.content{
+    overflow: hidden;
+    p{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        margin-bottom: .8rem;
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.absolute{
+    cursor: pointer;
+}
+
+.expander{
+    color: $primary;
+    font-weight: 700;
+    cursor: pointer;
+    span{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+.arrow{
+    margin-right: 2.2rem;
+    margin-top: -.25rem;
+    //transition: all .2s ease-in-out;
+    vertical-align: middle;
+    path[stroke]{
+        stroke: $primary;
+    }
+    path[fill]{
+        fill: $primary;
+    }
+    transition: 0.4s 0.1s ease-in-out;
+}

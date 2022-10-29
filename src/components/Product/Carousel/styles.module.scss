@@ -1,0 +1,42 @@
+@import '../../../styles/base.scss';
+
+$carousel-width: calc(100vw - 17px); // 17px browser scroll width
+
+.carousel{
+    display: flex;
+    overflow: scroll;
+    width: $carousel-width;
+    margin-left: -96px;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    margin-bottom: 8rem;
+    &:last-child::after{
+        content: ' ';
+        padding-right: 48px;
+    }
+    & > div:nth-of-type(1){
+        margin-left: 96px;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    h1{
+        font-size: 40px;
+    }
+}
+
+.controls{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.prev{
+    margin-right: 40px;
+}

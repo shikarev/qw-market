@@ -1,0 +1,14 @@
+.alphabet{
+    margin:4rem 0;
+    overflow: scroll;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.waiting{
+    opacity: 0.8;
+    pointer-events: none;
+}

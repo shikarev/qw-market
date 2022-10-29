@@ -1,0 +1,153 @@
+@import "../../../styles/mixins";
+
+.wrapper {
+  margin-top: -2rem;
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: $mainTextDark;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navigation_menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+}
+
+.navigation_product {
+  display: flex;
+  align-items: center;
+  flex: 0 0 40%;
+}
+
+.subInfo {
+  display: flex;
+}
+
+.description{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1.6rem 0;
+  align-items: center;
+}
+
+.stars{
+  display: flex;
+  flex-wrap: nowrap;
+  padding-right: .8rem;
+}
+
+.review {
+  padding-right: 2.4rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #00CC67;
+}
+
+.color {
+  color: #757575;
+  &:hover {
+    color: #EB4F5A;
+  }
+}
+
+.mediaContainer {
+  width: 13.4rem;
+  height: 13.4rem;
+  background: $accent-1;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.6rem;
+  box-sizing: border-box;
+  align-content: center;
+  margin-right: 1.6rem;
+}
+
+.stickyMode {
+  padding: 2rem 0;
+  position: sticky;
+  top: 10rem;
+  background: rgba(255, 255, 255, 0.87);
+  backdrop-filter: blur(6px);
+  z-index: 8;
+}
+
+.media {
+  object-fit: contain;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.previewTitle {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 0.8rem;
+  color: $mainTextDark;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.previewPrice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: $mainTextDark;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  margin: -0.5rem;
+  flex-direction: row;
+  div:not(:last-child) {
+    margin-right: 3.5rem;
+    color: red;
+  }
+}
+
+.back {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #1A202C;
+  margin-bottom: 1.6rem;
+}
+
+.questions{
+  margin-top: 90px;
+}

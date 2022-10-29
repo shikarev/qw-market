@@ -1,0 +1,26 @@
+@import "src/styles/mixins";
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  max-height: 6.4rem;
+  height: 6.4rem;
+
+  &_value {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &_value_big {
+    width: fit-content;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 1.6rem;
+    color: $primary;
+  }
+
+}
+

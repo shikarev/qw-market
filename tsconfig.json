@@ -1,0 +1,12 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "./src",
+    "target": "ESNext",
+    "lib": ["es2019", "dom", "esnext"],
+  },
+  "files": ["src/qwangy-market.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

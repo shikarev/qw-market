@@ -1,0 +1,39 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    flex: 1 1 80%;
+    hr{
+        margin-top: 4rem;
+        margin-bottom: 2.4rem;
+        border-top: 1px solid $dividerBlack;
+    }
+}
+
+.content{
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+    row-gap: 6rem;
+    column-gap: 4rem;
+    grid-template-columns: repeat(auto-fill, 204px);
+}
+
+.product{
+    max-width: 204px;
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span{
+        white-space: nowrap;
+        color: $secondaryTextDark;
+        font-weight: 500;
+    }
+    nav{
+        width: fit-content;
+    }
+
+}

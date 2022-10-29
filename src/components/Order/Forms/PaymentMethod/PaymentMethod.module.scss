@@ -1,0 +1,108 @@
+@import "src/styles/mixins";
+
+.method{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.button{
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.cards_root{
+  max-width: 840px;
+}
+
+.top{
+  margin-top: 6rem;
+}
+
+.cards-container{
+  margin-bottom: 2rem;
+}
+
+.cards-labels {
+  display: flex;
+  justify-content: space-between;
+  &__add{
+    color: $primaryTap;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.card{
+  display: flex;
+  border: 2px solid $accent-1;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  height: 120px;
+  & > svg{
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+  &-info{
+
+    margin: 0 1.6rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.7rem;
+    &__title{
+      @include text-fixed-rows(2);
+      margin-bottom: .8rem;
+      overflow: hidden;
+    }
+    & p:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  &__selected{
+    border: 2px solid $primary;
+  }
+  &__disabled{
+    opacity: 0.5;
+  }
+  &-controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 24px;
+    & > svg{
+      cursor: pointer;
+      @include hover-scale(1.2);
+    }
+    &__danger{
+        path{
+          stroke: $primaryTap;
+        }
+    }
+  }
+  &-description{
+    color: $secondaryTextDark;
+  }
+
+  &:hover{
+    border: 2px solid $primary;
+  }
+}
+
+.form-header{
+  display: flex;
+  justify-content: space-between;
+  h2{
+    padding-right: 2rem;
+  }
+  & span{
+    color: $primaryTap;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    cursor: pointer;
+  }
+}
+

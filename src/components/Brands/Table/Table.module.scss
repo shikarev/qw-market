@@ -1,0 +1,21 @@
+@import "src/styles/mixins";
+
+.container{
+    margin-top: 2.5rem;
+    p{
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5rem;
+        padding: 0.8rem 0;
+    }
+    .link{
+        padding: 0.8rem 0;
+        font-weight: 700;
+        line-height: 1.5rem;
+        color: $primary;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+

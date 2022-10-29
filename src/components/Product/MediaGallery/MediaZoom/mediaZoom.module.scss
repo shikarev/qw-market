@@ -1,0 +1,13 @@
+@import "src/styles/mixins";
+
+.zoom{
+  position: absolute;
+  right: 2.6rem;
+  bottom: 2.6rem;
+  cursor: pointer;
+  @include for-mobile-only{
+    width: 4rem;
+    right: 1.6rem;
+    bottom: 1.2rem;
+  }
+}

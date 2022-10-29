@@ -1,0 +1,25 @@
+@import "../../../../../../styles/mixins";
+
+.confirm-dialog {
+
+}
+
+.wrapper {
+  box-sizing: border-box;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3.4rem;
+  line-height: 4.1rem;
+  margin-bottom: 4rem;
+}
+
+.container {
+  padding: 1.6rem;
+}

@@ -1,0 +1,56 @@
+@import "../../styles/mixins.scss";
+@import "src/styles/base";
+@import "src/styles/sass-utils";
+
+.carousel{
+  overflow-y: visible;
+}
+
+.navigation {
+  margin-bottom: 4.6rem;
+  min-height: 4.9rem;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include noSelect();
+}
+
+.title {
+  @include media-breakpoint-down(sm){
+    font-size: 2rem;
+  }
+}
+
+.navigation-buttons {
+  display: flex;
+  margin-left: 1.6rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-screen {
+  width: fit-content;
+  margin-left: 3rem;
+  display: block;
+  @include media-breakpoint-down(lg){
+    display: none;
+  }
+}
+
+.mobile-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  @include media-breakpoint-up(lg){
+    display: none;
+  }
+}
+
+.button-mobile {
+  width: fit-content;
+  display: block;
+}

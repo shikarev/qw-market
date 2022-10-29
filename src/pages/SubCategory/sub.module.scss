@@ -1,0 +1,65 @@
+@import "src/styles/mixins";
+.wrapper{
+    margin-bottom: 13rem;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    @include for-mobile-only{
+        flex-direction: column;
+    }
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .title {
+        font-weight: bold;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        margin-top: 1.6rem;
+    }
+    .subinfo {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #757575;
+        margin-top: 1.6rem;
+    }
+}
+
+.open{
+    display: none;
+    @include for-mobile-only{
+        display: block;
+    }
+}
+
+
+.products {
+    .wrapper{
+        hr{
+            margin-top: 4rem;
+            margin-bottom: 2.4rem;
+            border-top: 1px solid $dividerBlack;
+        }
+    }
+}
+
+.clear{
+
+}
+
+.close{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 16;
+}
+
+.mainContent {
+    width: 100%;
+}

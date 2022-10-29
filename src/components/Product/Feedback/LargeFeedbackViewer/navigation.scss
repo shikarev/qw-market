@@ -1,0 +1,60 @@
+//@import "swiper/swiper-vars.scss";
+
+.Fswiper-button-prev,
+.Fswiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  margin-top: calc(0px - (44px / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  border-radius: 19px;
+  &:not(:last-child) {
+    margin-right: 0;
+  }
+  &.swiper-button-disabled {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+  &:after {
+    font-size: 20px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+.Fswiper-button-prev,
+.swiper-rtl .Fswiper-button-next {
+  &:after {
+    content: '';
+    background-image: url('../../../../assets/Icons/viewer_l.svg?url');
+    background-size: 46px 46px;
+    width: 46px;
+    height: 46px;
+  }
+  left: 0;
+  right: auto;
+}
+.Fswiper-button-next,
+.swiper-rtl .Fswiper-button-prev {
+  &:after {
+    content: '';
+    background-image: url('../../../../assets/Icons/viewer_r.svg?url');
+    background-size: 46px 46px;
+    width: 46px;
+    height: 46px;
+  }
+  right: 0;
+  left: auto;
+}
+
+.swiper-button-lock {
+  display: none;
+}

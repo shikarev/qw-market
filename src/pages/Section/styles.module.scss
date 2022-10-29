@@ -1,0 +1,25 @@
+.wrapper{
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    display: flex;
+  }
+  h1{
+    margin-bottom: 5.6rem;
+    font-size: 4rem;
+  }
+  h3{
+    font-size: 2.4rem;
+  }
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.selector-wrapper {
+  margin-bottom: 8rem;
+}

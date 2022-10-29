@@ -1,0 +1,61 @@
+@import '../../../styles/base.scss';
+
+.offers{
+   min-width: 320px;
+}
+
+.offer{
+    position: relative;
+    background-color:  $accent-1;
+    height: 320px;
+    margin-bottom: 2.4rem;
+    border-radius: 6.4rem;
+    display: flex;
+    justify-content: flex-end;
+    img{
+        max-width: 100%;
+        max-height: auto;
+    }
+    .description{
+        position: absolute;
+        top: 3.2rem;
+        left: 2.4rem;
+        .offerfirst{
+            color: $primary;
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: .8rem;
+        }
+        .offersecond{
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.6rem;
+        }
+        .offerthird{
+            background-color: $peachSelect30;
+            font-weight: 500;
+            width: fit-content;
+            border-radius: 5rem;
+            backdrop-filter: blur(.4rem);
+            p{
+                padding: .8rem 1.6rem;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.brand{
+    height: 72px;
+    border-radius: 2.4rem;
+    background-color: $accent-1;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-height: 40px;
+        line-height: 40px;
+        max-width: 120px;
+    }
+}

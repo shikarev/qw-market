@@ -1,0 +1,64 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-wrap: nowrap;
+
+    &:hover {
+        path[stroke]{
+            stroke:$primary;
+        }
+        path[fill]{
+            fill: $primary;
+        }
+        span {
+            color: $primary;
+        }
+    }
+    @include for-mobile-only{
+        flex-direction: row;
+        padding-right: 1rem;
+    }
+}
+
+.size {
+    display: flex;
+    flex: 0 0 24px;
+
+    svg {
+        height: 2.4rem;
+    }
+}
+
+.text{
+    color: $secondaryTextDark;
+    margin-left: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.icon{
+    color: white;
+    path[stroke]{
+        stroke:$secondaryTextDark;
+    }
+    path[fill]{
+        fill: $secondaryTextDark;
+    }
+}
+
+.iconactive{
+    path[stroke]{
+        stroke: $primary;
+    }
+    path[fill]{
+        fill: $primary;
+    }
+}
+
+.shadow {
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+}

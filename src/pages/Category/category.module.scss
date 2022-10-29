@@ -1,0 +1,43 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    h1{
+
+        font-size: 4rem;
+        @include for-mobile-only{
+            font-size: 2.4rem;
+        }
+    }
+    h3{
+        font-size: 2.4rem;
+    }
+    .count{
+        margin-top: 1.6rem;
+        margin-bottom: 4rem;
+        @include for-mobile-only{
+            margin-bottom: 3rem;
+        }
+        color: $secondaryTextDark;
+    }
+}
+
+.content{
+    display: flex;
+    margin-bottom: 13rem;
+    @include for-mobile-only{
+        flex-direction: column;
+    }
+    .sections{
+        width: 20%;
+        flex: 1 0 250px;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        margin-right: 2rem;
+        @include for-mobile-only{
+            width: 100%;
+            max-height: 300px;
+            overflow: auto;
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+$primary: #EB4F5A;
+$peachSelect:#FFD1D5;
+$primaryTap: #D34650;
+$mainTextDark: #1A202C;
+$secondaryTextDark: #757575;
+$blackLightGray: #E9E9EB;
+$accent-1: #F6F7FB;
+$peachSelect30: rgba($peachSelect, .3);
+$dividerBlack: #DFDFDF;
+$darkBgColor: #34363D;
+$primaryHover: #FF6772;
+
+$mobile-size: 601px;
+$tablet-size: 600px;
+$tablet-landscape-size: 900px;
+$desktop-size: 1280px;
+$large-desktop-size: 1632px;
+$larger-desktop-size: 2048px;
+
+$mobile-margin: 2rem;
+$tablet-portrait-margin: 4rem;
+$tablet-landscape-margin: 5.9rem;
+$desktop-margin: 9.6rem;
+$desktop-large-margin: 11.8rem;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);

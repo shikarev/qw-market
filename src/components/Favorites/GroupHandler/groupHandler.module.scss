@@ -1,0 +1,42 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin :8rem 8rem 4rem 8rem;
+
+    }
+    input{
+        margin : 0 8rem;
+        border-radius: 3.2rem;
+        border: solid 2px $dividerBlack;
+        font-size: 1.6rem;
+        line-height: 5.6rem;
+        min-width: 40rem;
+        font-size: 2rem;
+        font-weight: 600;
+        padding-left: 2.4rem;
+        &:focus{
+            outline: none
+        }
+    }
+
+    button{
+        margin :4rem 8rem 8rem 8rem;
+        width: fit-content;
+    }
+}
+
+.modal{
+    background-color: white;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    border-radius: 3.2rem;
+  }

@@ -1,0 +1,12 @@
+@import "src/styles/base";
+
+.under_construction{
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+  color: #fff;
+}

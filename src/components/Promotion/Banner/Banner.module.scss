@@ -1,0 +1,121 @@
+@import "src/styles/mixins";
+
+.root {
+  display: block;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 100%;
+  height: 0;
+  border-radius: 2rem;
+  font-size: clamp(1.2rem, 2.8vw, 4rem);
+  padding-bottom: 50%;
+  background-color: $accent-1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    position: absolute;
+    border-radius: 1.9rem;
+    top:0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg, #FFFFFF 0%, rgba(255, 201, 201, 0.31) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 8.33%;
+    padding-left: 6.66%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    max-width: unquote('max(200px, 50%)');
+
+    .controls {
+      margin-bottom: clamp(1rem, 2.8vw, 4rem);
+      width: 18rem;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+
+      &__disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &_current {
+        font-size: 4rem;
+      }
+
+      &_total {
+        font-size: 2rem;
+      }
+
+      & svg {
+        cursor: pointer;
+      }
+    }
+
+    .manufacturer {
+      color: $primary;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: .8rem;
+      font-size: 1.6rem;
+    }
+
+    .name {
+      font-weight: 700;
+      margin-bottom: clamp(.4rem, 1.4vw, 1.6rem);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .description {
+      font-weight: 500;
+      font-size: clamp(1rem, 1.4vw, 1.6rem);
+    }
+  }
+
+  &__square {
+    padding-bottom: 88%;
+    border-radius: 6.4rem;
+    & .inner{
+      max-width: unquote('max(500px, 50%)');
+    }
+    &:after{
+      border-radius: 6.2rem;
+      content: '';
+      position: absolute;
+      top:0 ;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(95deg, #FFFFFF 0%, rgba(255, 201, 201, 0.31) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
+    }
+  }
+}
+
+.button {
+  margin-top: 5rem;
+  min-width: 20rem;
+  display: flex;
+  align-items: center;
+
+  & a{
+    text-decoration: none;
+  }
+  & p{
+    padding: 1.6rem 4rem;
+  }
+}

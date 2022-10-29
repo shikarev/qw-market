@@ -1,0 +1,19 @@
+@import "../../../../styles/mixins";
+
+.thumbsContainer {
+  display: flex;
+  white-space: nowrap;
+  margin-left: 1rem;
+  .count {
+    padding: 0 1rem;
+    display: flex;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1A202C;
+    align-items: center;
+    cursor: pointer;
+  }
+  .size {
+    margin-right: .4rem;
+  }
+}

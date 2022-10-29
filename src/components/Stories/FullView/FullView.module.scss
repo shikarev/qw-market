@@ -1,0 +1,87 @@
+@import "../../../styles/mixins";
+@import "../../../styles/sass-utils";
+
+$media-small-width: 288px;
+$media-small-height: 630px;
+$media-large-width: 329px;
+$media-large-height: 715px;
+
+.root{
+  position: fixed;
+  height: 100vh;
+  min-width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.media{
+  transform: translateY(-50%);
+  margin-top: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  &-dummy{
+    margin: 2.5rem;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    &__small{
+      flex: 0 0 $media-small-width;
+      width: $media-small-width;
+    }
+    &__large{
+      flex: 0 0 $media-large-width;
+      width: $media-large-width;
+    }
+  }
+  &-slide{
+    border-radius: 2rem;
+    background-color: #1a202c;
+    margin: 2.5rem;
+    object-fit: cover;
+    object-position: center;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    &__small{
+      width: $media-small-width;
+      height: $media-small-height;
+    }
+    &__large{
+      width: $media-large-width;
+      height: $media-large-height;
+    }
+  }
+}
+
+.story{
+  position: relative;
+  padding: 2.5rem;
+
+  &-icon{
+    position: absolute;
+    top: 50%;
+    z-index: 1001;
+    cursor: pointer;
+    &__left{
+      left: -130px;
+    }
+    &__right{
+      right: -130px;
+    }
+    &__disabled{
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}

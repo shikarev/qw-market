@@ -1,0 +1,46 @@
+@import "../../../../src/styles/mixins";
+
+.check{
+  h1{
+    margin-bottom: 4rem;
+  }
+
+  &-recipient{
+    @include add-border();
+    flex-direction: column;
+  }
+}
+
+.card_content{
+  display: flex;
+  align-items: start;
+  svg{
+    width: 2.4rem;
+    height: 2.4rem;
+    flex: 0 0 2rem;
+    path[stroke]{
+      stroke: currentColor;
+    }
+    path[fill]{
+      fill: currentColor;
+    }
+    path[stroke-width]{
+      stroke: currentColor;
+    }
+  }
+}
+
+.card_description{
+  display: inline-block;
+  margin-left: 1.4rem;
+  &_main{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &_additional{
+    margin-top: .4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $secondaryTextDark;
+  }
+}

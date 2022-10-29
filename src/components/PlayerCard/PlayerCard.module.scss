@@ -1,0 +1,97 @@
+@import "src/styles/mixins";
+
+
+
+.wrapper {
+  display: flex;
+  position: relative;
+  margin-bottom: 7.2rem;
+  border-radius: 5rem;
+  width: 90%;
+  height: 33.6rem;
+  box-shadow: #1A202C 0 0 1px;
+  overflow: hidden;
+  @include for-mobile-only{
+    width: 39rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .media{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .playButton{
+    position: absolute;
+    left: 41.4%;
+    top: 18.7%;
+    @include for-mobile-only{
+      left: 35%;
+      top: 23%;
+    }
+    .playAction{
+      width: 8rem;
+      height: 8rem;
+      &:hover {
+        fill: $primary;
+      }
+    }
+  }
+
+  .background {
+    position: relative;
+    background: linear-gradient(74.27deg, #FFFFFF 7.49%, rgba(255, 255, 255, 0.1) 133.63%);
+    border-radius: 2.4rem;
+    filter: blur(42px);
+    backdrop-filter: blur(42px);
+    width: 100%;
+    height: 11rem;
+    top: 23rem;
+  }
+
+  .playerContainer {
+    position: relative;
+    width: 30.2rem;
+    top: 13rem;
+    left: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+    .productName {
+      display: flex;
+      width: 100%;
+      left: 2.2rem;
+      top: 10px;
+      height: 53px;
+      overflow: hidden;
+
+      p {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 26px;
+        @media screen and (max-width: 767px) {
+          font-family: SF Pro Display;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+
+        }
+      }
+    }
+    .viewCounter{
+      display: flex;
+      background-color: inherit;
+      align-items: center;
+      margin-left: 0.5rem;
+      margin-top: 1rem;
+      width: 93px;
+      height: 24px;
+    }
+  }
+}

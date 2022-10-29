@@ -1,0 +1,102 @@
+@import "src/styles/mixins";
+
+.root{
+    background-color: #F6F6F6;
+    padding: 2.4rem;
+    border-radius: 3.2rem;
+}
+
+.content {
+    margin-top: 3.2rem;
+    padding: 2rem 3.2rem;
+    background-color: white;
+    border-radius: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    &-header{
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &-divider{
+        margin-top: 2rem;
+        width: calc(100% + 6.4rem);
+        height: 1px;
+        background-color: #DFDFDF;
+        margin-left: -3.2rem;
+        margin-right: -3.2rem;
+     }
+    &-media{
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        min-height: 15rem;
+    }
+}
+
+// TODO REMOVE DUPLICATE
+
+.container{
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 8rem;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $accent-1;
+    }
+}
+
+.details{
+    &-label{
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+    &-block{
+        margin-bottom: 4rem;
+    }
+}
+
+.product{
+    display: flex;
+    margin-top: 3rem;
+    min-width: 12rem;
+    &-image{
+        flex: 0 0 10rem;
+        height: 10rem;
+        width: 10rem;
+        margin-right: 3rem;
+        background-color: $accent-1;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 2.4rem;
+    }
+    &-description{
+        display: flex;
+        flex-wrap: wrap;
+        width: 180px;
+    }
+    &-name{
+        flex: 1 0 100%;
+        font-weight: 600;
+        @include text-fixed-rows(3);
+    }
+    &-price{
+        flex: 0 0 auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    &-quantity{
+        color: $secondaryTextDark;
+        font-weight: 700;
+        margin-top: 1rem;
+    }
+}

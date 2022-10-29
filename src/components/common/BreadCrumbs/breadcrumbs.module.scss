@@ -1,0 +1,16 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    a, p{
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: #1A202C;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    @include for-mobile-only{
+        display: none;
+    }
+}

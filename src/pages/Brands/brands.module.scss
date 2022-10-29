@@ -1,0 +1,93 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    h4{
+        font-size: 2rem;
+    }
+    padding-bottom: 10rem;
+}
+
+.title{
+    margin-bottom: 1.6rem;
+}
+
+.breadcrumbs{
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.counter{
+    font-weight: 500;
+    color: $secondaryTextDark;
+    margin-right: 0.8rem;
+}
+
+.view-all{
+    font-weight: 700;
+    color: $primary;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popular{
+    margin-top: 4rem;
+}
+
+.brands{
+    .container{
+        margin: 1rem;
+        display: grid !important;
+        grid-auto-rows: auto;
+        row-gap: 1.6rem;
+        column-gap: 1.6rem;
+    }
+    margin-bottom: 8rem;
+}
+
+.brand{
+    height: 72px;
+    width: 100%;
+    border-radius: 2.4rem;
+    background-color: $accent-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    img{
+        max-height: 40px;
+        line-height: 40px;
+        max-width: 120px;
+    }
+}
+
+.offers{
+    h1{
+        margin-bottom: 4rem;
+    }
+}
+
+.discount{
+    margin-top: 8rem;
+}
+
+.image{
+    min-width: 226px;
+    height: 226px;
+    border: solid 2px rgba(0,0,0,0);
+    border-radius: 2rem;
+    margin-right: 3.2rem;
+    margin-bottom: 2rem;
+    background-color: $accent-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    img{
+        object-fit: contain;
+        max-height: 190px;
+        max-width: 190px;
+    }
+    &:hover{
+        border: solid 2px $primary;
+    }
+}

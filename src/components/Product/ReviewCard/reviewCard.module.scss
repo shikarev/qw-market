@@ -1,0 +1,155 @@
+@import "../../../styles/base.scss";
+
+.container {
+  margin-bottom: 3.2rem;
+}
+
+.main {
+  //display: flex;
+  margin-bottom: 1.6rem;
+}
+
+.userPic {
+  display: flex;
+  width: 4.4rem;
+  margin-right: 1.6rem;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+}
+
+.reply-likes {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentaryContainer {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-left: 6rem;
+
+  .edit {
+    color: $mainTextDark;
+    margin-right: 4rem;
+    cursor: pointer;
+  }
+
+  .delete {
+    color: #EB4F5A;
+    cursor: pointer;
+  }
+}
+
+.messageComments {
+  display: flex;
+  margin-top: 1.6rem;
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  margin-top: 1rem;
+  //height: 2.4rem;
+}
+
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.commentsButton {
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 1.6rem;
+
+  &:hover {
+    color: $primary
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.replyContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1.6rem 0;
+}
+
+.buttonsRow {
+  margin-top: 1.6rem;
+}
+
+.loadMore {
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 1.6rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: $primary;
+
+  &:hover {
+    color: #ff4653
+  }
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.commentsShow {
+  width: fit-content;
+  cursor: pointer;
+  font-weight: 600;
+  &:hover {
+    color: $primary
+  }
+}
+
+.commentsContainer {
+  padding-left: 6rem;
+  margin-top: 1.6rem;
+}
+
+/*.imaga {
+  width: 50px;
+  height: 66px;
+  border-radius: 8px;
+}
+
+img {
+  width:inherit;
+}*/
+
+.picContainer {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-left: 6rem;
+}
+
+.pictures {
+  width: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70px;
+  border-radius: .8rem;
+  overflow: hidden;
+  &:not(:last-child){
+    margin-right: 1.6rem;
+  }
+}

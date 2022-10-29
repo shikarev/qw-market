@@ -1,0 +1,32 @@
+@import "src/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 52.2rem);
+  h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    color: $mainTextDark;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    color: $mainTextDark;
+    .highlighted-text {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+
+}
+

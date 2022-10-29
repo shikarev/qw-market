@@ -1,0 +1,38 @@
+@import "src/styles/mixins";
+
+.reviewContainer {
+  margin-bottom: 4rem;
+  @include for-mobile-only {
+    order: 2;
+  }
+}
+
+.reviewTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 2rem;
+}
+
+.reviewFilter {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 1.6rem;
+  line-height: 0;
+}
+
+.ratingStars {
+  min-width: 10rem;
+  margin-right: 1.6rem;
+  line-height: 0;
+}
+
+.check {
+  margin-right: 2rem;
+}
+
+.ratingLabel {
+  display: flex;
+  align-items: center;
+}

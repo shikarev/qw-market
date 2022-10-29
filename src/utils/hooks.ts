@@ -1,0 +1,55 @@
+import { useState, useEffect, RefObject} from 'react';
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+export function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+
+type AnyEvent = MouseEvent | TouchEvent
+
+export function useOnClickOutside<T extends HTMLElement = HTMLElement>(
+    ref: RefObject<T>,
+    handler: (event: AnyEvent) => void,
+): void {
+  useEffect(() => {
+    const listener = (event: AnyEvent) => {
+      const el = ref?.current
+
+      // Do nothing if clicking ref's element or descendent elements
+      if (!el || el.contains(event.target as Node)) {
+        return
+      }
+
+      handler(event)
+    }
+
+    document.addEventListener(`mousedown`, listener)
+    document.addEventListener(`touchstart`, listener)
+
+    return () => {
+      document.removeEventListener(`mousedown`, listener)
+      document.removeEventListener(`touchstart`, listener)
+    }
+
+    // Reload only if ref or handler changes
+  }, [ref, handler])
+}

@@ -1,0 +1,157 @@
+
+variables:
+   dockerfilename: "Dockerfile"
+   name: "qw-market"
+   root_name: "qw-root"
+   username: "ncadmin"
+   docker_network: "qwangy-net"
+
+
+workflow:
+  rules:      
+    # - if: '$CI_COMMIT_BRANCH == "feature"'
+    #   variables:
+    #      target_server: "s001-04-gui001" 
+    #      docker_registry: "nexus.nazaret-c.com:5000"    
+    - if: '$CI_COMMIT_BRANCH == "feature"'
+      variables:
+         target_server: "s001-04-gui002"
+         docker_registry: "nexus.nazaret-c.com:5000"
+         docker_registry_https: "nexus.nazaret-c.com:5001"  
+    - when: always
+
+
+stages:
+  - test_Dockerfile
+  - test_js
+  - git_clone_endpoints
+  - build
+  # - push
+  - deploy
+  - clean
+
+
+image: ${docker_registry}/docker:latest
+services:
+  - ${docker_registry}/docker:20.10.12-dind-alpine3.15
+
+
+.test_hadolint: &test_hadolint
+  script:
+    - docker run --rm  ${docker_registry}/hadolint/hadolint:latest-alpine < $dockerfilename
+
+
+test1:  
+  <<: *test_hadolint
+  stage: test_Dockerfile
+  only:
+    refs:
+      - feature
+    changes:
+      - $dockerfilename
+
+.test_js: &test2
+  script:
+    - docker run --tty --rm -v $(pwd):/data  ${docker_registry}/cytopia/eslint:7 .
+  allow_failure: true
+
+
+test2:
+  <<: *test2
+  stage: test_js
+  only:
+    - feature
+
+.git_clone_endpoints:  &git_clone_endpoints
+  script:
+   - ls -la
+   - git clone -b feature git@gitlab.nazaret-c.com:frontend-team-qwangy/endpoints.git
+   - ls -la
+  artifacts:
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    paths:
+      - endpoints/
+    expire_in:  10 min
+
+
+
+git_clone_endpoints:
+  <<: *git_clone_endpoints
+  stage: git_clone_endpoints
+  only:
+    - feature
+    - static
+
+
+
+.build: &build
+  before_script:
+    - cat endpoints/endpoints.txt >> .env
+  script:
+    - DOCKER_BUILDKIT=1 docker build --pull -t  ${docker_registry_https}/${name}:$CI_COMMIT_BRANCH  --build-arg DOCKER_REGISTRY=${docker_registry_https} -o out -f ${dockerfilename} .
+  artifacts:
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    paths:
+      - out/
+    expire_in: 10 min
+    reports:
+      dotenv: .env 
+  dependencies: 
+    - git_clone_endpoints
+#
+
+build_image:
+  <<: *build
+  stage: build
+  only:
+    - feature
+    - static
+    
+
+# .push: &push
+#   script:
+#     -  docker push ${docker_registry}/${name}:$CI_COMMIT_BRANCH
+
+# push_image:
+#   <<: *push
+#   stage: push
+#   only:
+#     - feature
+
+.deploy:  &deploy
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - ssh -o StrictHostKeyChecking=no ${username}@${target_server}  " docker rm -f ${name} || true " 
+    - ssh -o StrictHostKeyChecking=no ${username}@${target_server}  " docker rmi ${docker_registry}/${name}:$CI_COMMIT_BRANCH || true " 
+    - ssh -o StrictHostKeyChecking=no ${username}@${target_server}  " mkdir -p /content/market/html/ "
+    # - ssh -o StrictHostKeyChecking=no ${username}@${target_server}  " docker run  -d --name ${name} --restart=always -p 3002:3002   ${docker_registry}/${name}:$CI_COMMIT_BRANCH"
+    - scp -r -o StrictHostKeyChecking=no ./out/* ${username}@${target_server}:/content/market/html/   
+    - ssh -o StrictHostKeyChecking=no ${username}@${target_server}  " docker restart ${root_name} || true " 
+  artifacts:
+      paths:
+        - out/
+      expire_in: 10 min
+  dependencies: 
+    - build_image
+
+
+deploy_market:
+  <<: *deploy
+  stage: deploy
+  only:
+    - feature
+    - static
+
+
+cleanup:
+  stage: clean
+  script:
+    - rm -rf ./*
+    - docker rmi ${docker_registry}/${name}:$CI_COMMIT_BRANCH  || true 
+  only:
+    - feature
+    - static
